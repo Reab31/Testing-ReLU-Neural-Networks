@@ -44,7 +44,7 @@ def test(net):
 		Yt = torch.max(Xt,axis=1)[0]
 		Yt = Yt.view(-1,1)
 		#Compute predictions
-		Y_predt = net(Xt.float(),drop_out=drop_out)
+		Y_predt = net(Xt.float())
 		#Compute the difference
 		diff = torch.abs(Yt-Y_predt)
 		#Compute the various norms
